@@ -1,1 +1,55 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    
+  }
+li{
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    
+  }
 
+nav{
+    display: flex;
+    width: 100%;
+}
+.navbar-mobile{
+    margin-left: auto;
+    
+}
+ul.navbar-list{
+    
+    
+}
+.hamburger {
+    display: none;
+    
+  }
+    
+  @media screen and (max-width: 800px) {
+    .hamburger {
+        
+        justify-content: flex-end;
+      display: flex;
+    }
+}
+.navbar-list {
+    display:flex ;
+    width: 100%;
+    justify-content: space-between;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .navbar-list {
+            display: none;
+        }
+}
