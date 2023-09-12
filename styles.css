@@ -99,10 +99,21 @@ a.nav-link:hover ,a.nav-link:focus{
 /*END color cange on mouse desktop menu*/
 
 
+/* START of main content and all section of the webside */
 
-
-main{
-    height: 1000px;
-    background-color: #017575;
+.home{
     margin-top: 100px;
+    top:0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: url('./images/1.JPG');
+    background-position: center;
+    background-clip: content-box;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    
+    
+    
 }
