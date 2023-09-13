@@ -4,6 +4,7 @@
     margin-left: 0px;
     margin-right: 0px;
     
+    
 }
 
 /*Start Static position of logo anf brand name*/
@@ -36,7 +37,8 @@ nav{
 .button{
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    padding: 4vw;
+    padding: 6vw;
+    
     font-size: 20px;
     font-weight: bolder;  
     border: none;
@@ -52,6 +54,7 @@ nav{
       flex-direction: column;
       width: 40%;
       margin-left: auto; 
+      
     }
 }
 /*END mobile device MENU button*/
@@ -60,6 +63,7 @@ nav{
     display:flex ;
     margin-left: auto;
     width: 40%;
+    padding-right: 5vw;
     justify-content: space-between;
     }
     @media screen and (max-width: 800px) {
@@ -76,7 +80,7 @@ nav{
     font-size: 18px;
     font-weight: bold;
     border-bottom: 1px solid black;
-/*Start Fade in of list menu mobile devices*/
+    /*Start Fade in of list menu mobile devices*/
     animation-name: fadeIn;    
     animation-duration: 1s;
  }
@@ -113,12 +117,12 @@ h1{
 .background{
     display: flex; 
     background-image: url('./images/1.JPG');
-    background-position: 0% 150%;
-    background-size: 100vw 100vw;
     
-    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
     
 
+    background-repeat: no-repeat;
 }
     @media screen and (max-width: 800px) {
         .background {
@@ -127,18 +131,29 @@ h1{
             background-position: 40% 0%;
         }
 }
+
 .container1{
     display: flex;
-    margin-top:20%;
+    /* move photo height */
+    height: 25vw;
+    margin-top:20vw;
     margin-bottom: 20%;
 }   
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 750px) {
         .container1 {
             display: flex;
+            /* move photo height */
             height: 100vw;
+            width: 50vw;
+            
         }
 }
-div.home {
-    
+blockquote.instagram-media{
+    max-width: max-content;
+}
+div.content {
     display: flex;
+    flex-wrap: wrap;
+    
+    
 }
