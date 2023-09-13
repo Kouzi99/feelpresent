@@ -1,6 +1,11 @@
 *{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Quicksand', sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+html{
     
 }
 /*Start Static position of logo anf brand name*/
@@ -101,19 +106,41 @@ a.nav-link:hover ,a.nav-link:focus{
 
 /* START of main content and all section of the webside */
 
-.home{
-    margin-top: 100px;
-    top:0;
-    right: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vw;
-    background: url('./images/1.JPG');
-    background-position: center;
-    background-clip: content-box;
-    background-size: 150%;
+
+h1{
+    color: #ffffff;
+    
+}
+
+.background{
+    display: flex; 
+    background-image: url('./images/1.JPG');
+    background-position: 0% 150%;
+    background-size: 100vw 100vw;
+    
     background-repeat: no-repeat;
     
+
+}
+    @media screen and (max-width: 800px) {
+        .background {
+            background-size: cover;
+            display: flex;
+            background-position: 40% 0%;
+        }
+}
+.container1{
+    display: flex;
+    margin-top:20%;
+    margin-bottom: 20%;
+}   
+    @media screen and (max-width: 800px) {
+        .container1 {
+            display: flex;
+            height: 100vw;
+        }
+}
+div.home {
     
-    
+    display: flex;
 }
