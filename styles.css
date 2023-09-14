@@ -13,10 +13,12 @@
     font-size: 20px;
     text-decoration: none;
     color: black;
+    
 }
 .brand{
     align-items: flex-start;
-    display: flex;    
+    display: flex; 
+      
 }
 /*End Static position of logo anf brand name*/
 ul{
@@ -55,6 +57,7 @@ nav{
       width: 40%;
       margin-left: auto; 
       
+      
     }
 }
 /*END mobile device MENU button*/
@@ -65,6 +68,7 @@ nav{
     width: 40%;
     padding-right: 5vw;
     justify-content: space-between;
+    
     }
     @media screen and (max-width: 800px) {
         .navbar-desktop {
@@ -83,6 +87,7 @@ nav{
     /*Start Fade in of list menu mobile devices*/
     animation-name: fadeIn;    
     animation-duration: 1s;
+    
  }
  /*GLOBAL keyframes for use*/
  @keyframes fadeIn {
@@ -109,6 +114,8 @@ a.nav-link:hover ,a.nav-link:focus{
 /* START of main content and all section of the webside */
 
 main{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-left: 0vw;
     margin-right: 0vw;
@@ -122,11 +129,7 @@ h1{
 .background{
     display: flex; 
     background-image: url('./images/1.JPG');
-    
     background-size: 100% 100%;
-    
-    
-
     background-repeat: no-repeat;
 }
     @media screen and (max-width: 800px) {
@@ -139,16 +142,16 @@ h1{
 
 .container1{
     display: flex;
+    flex-wrap: wrap;
     /* move photo height */
     height: 25vw;
     margin-top:20vw;
-    margin-bottom: 20%;
-    
-    
+    margin-bottom: 20%;   
 }   
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 800px) {
         .container1 {
             display: flex;
+            flex-direction: column;
             /* move photo height */
             height: 160vw;
             width: 100vw;
@@ -156,33 +159,35 @@ h1{
         }
 }
 
-div.content {
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-}
+
 section.black{
     background-color: #000000;
     background-image: none;
 }
-
-.link-icon{
-    
-    
-    width: 10vw;
-    height: 10vw;
-}
-.content-title{
-    text-align: center;
-    width: 100vw;
-    
-}
 .content{
-    justify-content: center;
-    display:flex;
-    flex: auto;
-    margin-bottom: 2vw;
-    margin-right: 2vw;
+    justify-content: center;  
     
+    display: flex;   
 }
+.link-icon{  
+    display: flex; 
+    width: 15vw;
+    height: 15vw; 
+    margin-right: 3vw;  
+}
+@media screen and (max-width: 800px) {
+    .link-icon{
+        display: flex;
+        height: 20vw;
+        width: 20vw;
+        margin-top: 3vw;
+    }
+}
+.down{
+    margin-top: 1vw;
+    margin-right: 5vw;
+    margin-left: 2vw;
+}
+
+
+
