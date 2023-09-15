@@ -114,8 +114,10 @@ a.nav-link:hover ,a.nav-link:focus{
 /* START of main content and all section of the webside */
 
 main{
-    display: flex;
-    flex-direction: column;
+    display: block;
+    
+    
+    
     width: 100%;
     margin-left: 0vw;
     margin-right: 0vw;
@@ -128,6 +130,7 @@ h1{
 
 .background{
     display: flex; 
+    flex-wrap: wrap;
     background-image: url('./images/1.JPG');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -136,6 +139,7 @@ h1{
         .background {
             background-size: cover;
             display: flex;
+            flex-direction: column;
             background-position: 40% 0%;
         }
 }
@@ -143,15 +147,16 @@ h1{
 .container1{
     display: flex;
     flex-wrap: wrap;
+    
     /* move photo height */
     height: 25vw;
-    margin-top:20vw;
+    margin-top:10vw;
     margin-bottom: 20%;   
 }   
     @media screen and (max-width: 800px) {
         .container1 {
             display: flex;
-            flex-direction: column;
+            margin-top: 0;
             /* move photo height */
             height: 160vw;
             width: 100vw;
@@ -165,12 +170,15 @@ section.black{
     background-image: none;
 }
 .content{
-    justify-content: center;  
+    justify-content: center; 
+    flex-wrap: wrap; 
     
+    margin-left: 6vw;
     display: flex;   
 }
 .link-icon{  
     display: flex; 
+    margin-top: 8vw;
     width: 15vw;
     height: 15vw; 
     margin-right: 3vw;  
@@ -178,16 +186,16 @@ section.black{
 @media screen and (max-width: 800px) {
     .link-icon{
         display: flex;
+        
         height: 20vw;
         width: 20vw;
         margin-top: 3vw;
     }
 }
-.down{
-    margin-top: 1vw;
-    margin-right: 5vw;
-    margin-left: 2vw;
+.top{
+    background-image: url(./images/2.jpg);
+    margin-bottom: 10vw;
 }
-
-
-
+.frydek{
+    height: auto;
+}
