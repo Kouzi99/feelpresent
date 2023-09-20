@@ -1,6 +1,4 @@
-function myFunction(x) {
-   x.classList.toggle("change");
- } 
+
   
    //show and hide dropdown list item on button click
    function show_hide() {
@@ -15,13 +13,35 @@ function myFunction(x) {
  }
 
 
- 
 
+/* Loader */
+ window.addEventListener('load', () => {
+  const loaderWrapper = document.querySelector('.loader-wrapper');
+  loaderWrapper.style.display = 'none';
+});
+/* animated hamburger */
+const menuIcon = document.getElementById('menuIcon');
+const bars = document.querySelectorAll('.bar');
 
- const element = document.querySelector('.container2');
+let isOpen = false;
 
- element.addEventListener('click', () => {
-     element.classList.toggle('highlighted');
- });
+menuIcon.addEventListener('click', () => {
+    if (isOpen) {
+        // Close the menu (reset bars)
+        bars[0].style.transform = '';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = '';
 
+        bars.forEach(bar => bar.classList.remove('shadow'));
+    } else {
+        // Open the menu (transform bars)
+        bars[0].style.transform = 'rotate(45deg) translate(1vw, 3.2vw)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'rotate(-45deg) translate(1vw, -3.2vw)';
+
+        bars.forEach(bar => bar.classList.add('shadow'));
+    }
+
+    isOpen = !isOpen;
+});
 
