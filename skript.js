@@ -45,3 +45,38 @@ menuIcon.addEventListener('click', () => {
     isOpen = !isOpen;
 });
 
+
+/* Email sender */
+
+// Initialize Email.js with your User ID
+emailjs.init("XZpi9scatTPgKf54Q"); // Replace with your actual User ID
+
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    
+    emailjs.sendForm("service_qj1lrc2", "template_yegir0h", this)
+          .then(function(response) {
+          // Display a success message
+            displayMessage("Email sent successfully!", "success");
+            }, function(error) {
+            // Display an error message
+            displayMessage("Email could not be sent. Please try again later.", "error");
+            });
+});
+
+// Function to display messages
+function displayMessage(message, messageType) {
+  const messageContainer = document.getElementById("message-container");
+  messageContainer.textContent = message;
+
+  if (messageType === "success") {
+      messageContainer.style.color = "green";
+  } else if (messageType === "error") {
+      messageContainer.style.color = "red";
+  }
+
+  // Clear the message after a few seconds (optional)
+  setTimeout(function() {
+      messageContainer.textContent = "";
+  }, 5000); // Clear message after 5 seconds
+}

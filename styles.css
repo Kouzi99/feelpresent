@@ -244,3 +244,78 @@ section.black{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* style of email form */
+.container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.content-form{
+    
+    display: flex;
+    flex-direction: column;
+}
+#contact-form{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: #533c47;
+    border-radius: 1vw;
+}
+input{
+    border-radius: 3vw;
+}
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 15px 30px; /* Padding around text */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* input dorm  */
+/* Style text inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #007bff; /* Bottom border style and color */
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Background color */
+    font-size: 16px;
+    color: #333; /* Text color */
+    transition: border-bottom 0.3s ease, box-shadow 0.3s ease; /* Transition effect for the bottom border and box shadow */
+
+    /* Apply a box shadow when the input is focused (clicked or selected) */
+    &:focus {
+        border-bottom: 2px solid #0056b3; /* Change bottom border color on focus */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on focus */
+    }
+}
+
+/* Style labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    /* Your button styles here */
+}
+
+/* Add additional styles for specific input types or classes as needed */
