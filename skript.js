@@ -46,7 +46,7 @@ menuIcon.addEventListener('click', () => {
 });
 
 
-/* Email sender */
+/* Email sender  */
 
 // Initialize Email.js with your User ID
 emailjs.init("XZpi9scatTPgKf54Q"); // Replace with your actual User ID
