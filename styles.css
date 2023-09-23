@@ -248,23 +248,29 @@ section.black{
 /* style of email form */
 .container{
     display: flex;
-    align-content: center;
-    justify-content: center;
+    
 }
 .content-form{
     
     display: flex;
     flex-direction: column;
+    
+}
+.Ozvi{
+    padding-top: 5vw;
 }
 #contact-form{
+    
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    background-color: #533c47;
+    background-color: #5d8eb662;
+    
     
 }
-input{
-    
+.center{
+    justify-content: center;
+    align-content: center;
 }
 /* Style the submit button */
 input[type="submit"] {
@@ -272,10 +278,10 @@ input[type="submit"] {
     color: #fff; /* Text color */
     padding: 15px 30px; /* Padding around text */
     border: none; /* Remove default button border */
-    
+    border-radius: 0;
     cursor: pointer;
     font-size: 16px; /* Font size */
-    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    transition: background-color 0.6s ease; /* Smooth color transition on hover */
 }
 
 /* Hover effect */
@@ -288,7 +294,9 @@ input[type="submit"]:hover {
 input[type="text"],
 input[type="email"],
 textarea {
+    border-radius: 0;
     border: none;
+    width: 30vw;
     background-color: #ffffff; /* Background color */
     font-size: 16px;
     color: #302d2d; /* Text color */
@@ -305,7 +313,8 @@ textarea {
 label {
     display: flex;
     font-weight: bold;
-    margin-bottom: 2vw;
+    margin-top: 0.6vw;
+    margin-bottom: 1vw;
 }
 
 /* Style the submit button */
