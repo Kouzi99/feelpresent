@@ -260,36 +260,33 @@ section.black{
     
 }
 .Ozvi{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     padding-top: 5vw;
+
 }
 #contact-form{
-    
+    max-width: 100vw;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     background-color: #5d8eb662;
-    padding: 5vw;
+    padding: 2vw;
     
 }
 .center{
+    
     justify-content: center;
     align-content: center;
 }
-/* Style the submit button */
-input[type="submit"] {
-    background-color: #476688; /* Button background color */
-    color: #fff; /* Text color */
-    padding: 15px 30px; /* Padding around text */
-    border: none; /* Remove default button border */
-    border-radius: 0;
-    cursor: pointer;
-    font-size: 16px; /* Font size */
-    transition: background-color 0.6s ease; /* Smooth color transition on hover */
+#max{
+    max-width: 100vw;
 }
-
-/* Hover effect */
-input[type="submit"]:hover {
-    background-color: #429966; /* Darker color on hover */
+div.g-recaptcha{
+    display: flex;
+    max-width: 100%;
 }
 
 /* input dorm  */
@@ -303,20 +300,18 @@ textarea {
     background-color: #ffffff; /* Background color */
     
     color: #302d2d; /* Text color */
-    transition: border-bottom 0.3s ease, box-shadow 0.3s ease; /* Transition effect for the bottom border and box shadow */
+    max-width: 600px;
 
-    /* Apply a box shadow when the input is focused (clicked or selected) */
-    &:focus {
-        border-bottom: 5vw #b3277d; /* Change bottom border color on focus */
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Add a subtle box shadow on focus */
-    }
+  
 }
 input[type="email"]{
-    width: 30vw;
+    width: 90vw;
+    height: 15vw;
+    max-height: 30px;
 }
 #message{
-    width: 50vw;
-    height: 5vw;
+    
+    height: 50%;
     
 }
 /* Style labels */
@@ -324,11 +319,35 @@ label {
     display: flex;
     font-weight: bold;
     margin-top: 0.6vw;
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
+    
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #476688; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 15px 30px; /* Padding around text */
+    border: none; /* Remove default button border */
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 20px; /* Font size */
+    transition: background-color 0.6s ease;
+    transition: font-size 0.6s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect */
+input[type="submit"]:hover {
+    background-color: #429966; /* Darker color on hover */
+    font-size: 25px ;
 }
 
 
-iframe{
-    width:600vw;
-    height:300vw; 
+.map{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width:60vw;
+    height:30vw; 
 }
