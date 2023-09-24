@@ -332,3 +332,8 @@ input[type="submit"] {
 }
 
 /* Add additional styles for specific input types or classes as needed */
+
+iframe{
+    width=600vw;
+    height=300vw; 
+}
