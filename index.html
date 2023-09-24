@@ -12,7 +12,8 @@
 </script>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
-
+<!-- bot  -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <title>Feel Present</title>
 <link rel="icon" href="./images/FEEL PRESENT.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,8 +102,8 @@
                     <div class="content-form">
                         <h1 class="Ozvi">Ozvi se!</h1>
                         <form id="contact-form">
-                                <label  for="name">Jméno </label>
-                                <input placeholder="Tvoje jméno" type="text" id="name" name="name" required><br>
+                                <label  for="from_name">Jméno </label>
+                                <input placeholder="Tvoje jméno" type="text" id="from_name" name="from_name" required><br>
                                 <label for="email">Email </label>
                                 <input placeholder="Název@doména.xy" type="email" id="email" name="email" required><br>
                                 <label for="message">Zpráva </label>
@@ -110,12 +111,26 @@
                                 <input type="submit" value="Send">
                                 <div id="message-container"></div>
                         </form>
+                        <form action="?" method="POST">
+                            <div class="g-recaptcha" data-sitekey="6LeO1E0oAAAAALpo4_ZR4P1ff_pE9Vnmw_V_HmYV"></div>
+                            <br/>
+                            <input type="submit" value="Submit">
+                          </form>
+                          <script type="text/javascript">
+                            var onloadCallback = function() {
+                              alert("grecaptcha is ready!");
+                            };
+                          </script>
+                          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                          async defer>
+                      </script>
                      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
                      
                     </div>                    
                 </div>
             </div>
         </section>
+
         <section>
 
              

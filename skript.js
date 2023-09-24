@@ -79,5 +79,43 @@ function displayMessage(message, messageType) {
       messageContainer.textContent = "";
   }, 5000); // Clear message after 5 seconds
 }
+// Function to send an autoresponder email
+function sendAutoresponder(emailAddress) {
+    const templateParams = {
+        to_email: emailAddress,
+        subject: "Thank you for contacting us!",
+        message: "This is an automated response to confirm that we have received your message."
+    };
 
+    emailjs.send('your_email_service', 'your_template_id', templateParams)
+        .then(function(response) {
+            console.log('Autoresponder email sent:', response);
+        })
+        .catch(function(error) {
+            console.error('Autoresponder email error:', error);
+        });
+}
+
+// Example code to trigger the autoresponder when a user submits a contact form
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get the user's email address from the form
+    const emailAddress = document.getElementById('email').value;
+
+    // Send the autoresponder email
+    sendAutoresponder(emailAddress);
+
+    // Additional code to handle form submission and other actions
+});
 document.cookie = "myCookie=myValue; SameSite=None; Secure";
+
+
+
+
+
+
+
+
