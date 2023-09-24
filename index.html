@@ -101,29 +101,19 @@
             <div id="contact" class="container">
                     <div class="content-form">
                         <h1 class="Ozvi">Ozvi se!</h1>
-                        <form id="contact-form">
+                        <form action="?" method="POST" id="contact-form">
                                 <label  for="from_name">Jméno </label>
                                 <input placeholder="Tvoje jméno" type="text" id="from_name" name="from_name" required><br>
                                 <label for="email">Email </label>
                                 <input placeholder="Název@doména.xy" type="email" id="email" name="email" required><br>
                                 <label for="message">Zpráva </label>
                                 <textarea id="message" name="message" required></textarea><br>
-                                <input type="submit" value="Send">
                                 <div id="message-container"></div>
+                                <div class="g-recaptcha" data-sitekey="6LeO1E0oAAAAALpo4_ZR4P1ff_pE9Vnmw_V_HmYV"></div>
+                                <br/>
+                                 <input type="submit" value="Odeslat">
                         </form>
-                        <form action="?" method="POST">
-                            <div class="g-recaptcha" data-sitekey="6LeO1E0oAAAAALpo4_ZR4P1ff_pE9Vnmw_V_HmYV"></div>
-                            <br/>
-                            <input type="submit" value="Submit">
-                          </form>
-                          <script type="text/javascript">
-                            var onloadCallback = function() {
-                              alert("grecaptcha is ready!");
-                            };
-                          </script>
-                          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-                          async defer>
-                      </script>
+         
                      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
                      
                     </div>                    
