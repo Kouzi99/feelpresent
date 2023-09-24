@@ -36,7 +36,9 @@ nav{
     right: 0; 
     padding-bottom: 2px; 
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    
 }
+
 /*Start mobile device MENU button*/
 .bar.shadow {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -254,6 +256,7 @@ section.black{
     
     display: flex;
     flex-direction: column;
+    margin-bottom: 15vw;
     
 }
 .Ozvi{
@@ -265,7 +268,7 @@ section.black{
     display: flex;
     flex-direction: column;
     background-color: #5d8eb662;
-    
+    padding: 5vw;
     
 }
 .center{
@@ -296,7 +299,7 @@ input[type="email"],
 textarea {
     border-radius: 0;
     border: none;
-    width: 30vw;
+    width: 15vw;
     background-color: #ffffff; /* Background color */
     font-size: 16px;
     color: #302d2d; /* Text color */
@@ -308,7 +311,13 @@ textarea {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Add a subtle box shadow on focus */
     }
 }
-
+input[type="email"]{
+    width: 30vw;
+}
+#message{
+    width: 50vw;
+    height: 5vw;
+}
 /* Style labels */
 label {
     display: flex;
