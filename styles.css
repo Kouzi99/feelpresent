@@ -299,9 +299,9 @@ input[type="email"],
 textarea {
     border-radius: 0;
     border: none;
-    width: 15vw;
+    
     background-color: #ffffff; /* Background color */
-    font-size: 16px;
+    
     color: #302d2d; /* Text color */
     transition: border-bottom 0.3s ease, box-shadow 0.3s ease; /* Transition effect for the bottom border and box shadow */
 
@@ -317,7 +317,7 @@ input[type="email"]{
 #message{
     width: 50vw;
     height: 5vw;
-    font-size: 5vw;
+    
 }
 /* Style labels */
 label {
@@ -327,14 +327,8 @@ label {
     margin-bottom: 1vw;
 }
 
-/* Style the submit button */
-input[type="submit"] {
-    /* Your button styles here */
-}
-
-/* Add additional styles for specific input types or classes as needed */
 
 iframe{
-    width=600vw;
-    height=300vw; 
+    width:600vw;
+    height:300vw; 
 }
