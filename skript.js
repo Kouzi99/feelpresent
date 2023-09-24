@@ -80,6 +80,29 @@ function displayMessage(message, messageType) {
   }, 5000); // Clear message after 5 seconds
 }
 
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get form data
+    const formData = new FormData(event.target);
+    const name = formData.get("from_name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    // Perform any necessary validation here
+
+    // Display a browser-level alert with the submitted data
+    const alertMessage = `Form submitted with:\n
+    Jméno: ${name}\n
+    Email: ${email}\n
+    Zpráva: ${message}`;
+
+    window.alert(alertMessage);
+
+    // Optionally, you can reset the form after displaying the alert
+    event.target.reset();
+});
+
 document.cookie = "myCookie=myValue; SameSite=None; Secure";
 
 
