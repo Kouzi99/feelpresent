@@ -102,10 +102,10 @@
                     <div class="content-form">
                         <h1 class="Ozvi">Ozvi se!</h1>
                         <form action="?" method="POST" id="contact-form">
-                                <label  for="from_name">Jméno </label>
+                                <label autocomplete="name" for="from_name">Jméno </label>
                                 <input placeholder="Tvoje jméno" type="text" id="from_name" name="from_name" required><br>
-                                <label for="email">Email </label>
-                                <input placeholder="Název@doména.xy" type="email" id="email" name="email" required><br>
+                                <label  for="email">Email </label>
+                                <input autocomplete="email" placeholder="Název@doména.xy" type="email" id="email" name="email" required><br>
                                 <label for="message">Zpráva </label>
                                 <textarea id="message" name="message" required></textarea><br>
                                 <div id="message-container"></div>
@@ -131,7 +131,8 @@
 <!-- spodek -->
     <footer>
         <h1>hello</h1>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105192.73224045435!2d17.67650685!3d49.2310425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47130cad4c888e0d%3A0x418d4c16a8ac214f!2zWmzDrW4!5e1!3m2!1sen!2scz!4v1695542794450!5m2!1sen!2scz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=17.651252746582035%2C49.21092508857803%2C17.68129348754883%2C49.23654296363892&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=15/49.2237/17.6663">View Larger Map</a></small>
+        <button id="clear-cookies-button">click</button>
     </footer>
 
     

@@ -56,38 +56,42 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     emailjs.sendForm("service_qj1lrc2", "template_yegir0h", this)
           .then(function(response) {
           // Display a success message
-            displayMessage("Email sent successfully!", "success");
-            window.alert("Email sent successfully!");
+            
+            window.alert("Email byl odeslán, děkuji. Brzy se ozvu.");
             event.target.reset();
             }, function(error) {
             // Display an error message
-            displayMessage("Email could not be sent. Please try again later.", "error");
-            
+            window.alert("Omlouvám se, něco se nepovedlo.");
             });
 });
 
-// Function to display messages
-function displayMessage(message, messageType) {
-  const messageContainer = document.getElementById("message-container");
-  messageContainer.textContent = message;
 
-  if (messageType === "success") {
-    window.alert("Email sent successfully!");
-    
-  } else if (messageType === "error") {
-    window.alert("Email could not be sent. Please try again later.");
+
+function clearCookies() {
+    // List of cookie names to clear
+    const cookieNames = [
+      'CONSENT',
+      'HSID',
+      'SSID',
+      'APISID',
+      'SAPISID',
+      '__Secure-1PAPISID',
+      'SID',
+      '__Secure-1PSID',
+      'OTZ',
+      '1P_JAR',
+      'SIDCC',
+      '__Secure-1PSIDCC'
+    ];
+  
+    // Loop through the cookie names and clear each one
+    cookieNames.forEach((cookieName) => {
+      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.google.com; secure; samesite=None`;
+    });
   }
 
-}
-
-
-
-document.cookie = "myCookie=myValue; SameSite=None; Secure";
-
-
-
-
-
+  const clearButton = document.getElementById('clear-cookies-button');
+  clearButton.addEventListener('click', clearCookies);
 
 
 
