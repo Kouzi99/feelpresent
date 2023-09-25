@@ -66,40 +66,12 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 });
 
 
-
-function clearCookies() {
-    // List of cookie names to clear
-    const cookieNames = [
-      'CONSENT',
-      'HSID',
-      'SSID',
-      'APISID',
-      'SAPISID',
-      '__Secure-1PAPISID',
-      'SID',
-      '__Secure-1PSID',
-      'OTZ',
-      '1P_JAR',
-      'SIDCC',
-      '__Secure-1PSIDCC'
-    ];
-  
-    // Loop through the cookie names and clear each one
-    cookieNames.forEach((cookieName) => {
-      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.google.com; secure; samesite=None`;
-    });
-  }
-
-  const clearButton = document.getElementById('clear-cookies-button');
-  clearButton.addEventListener('click', clearCookies);
-
-
 /* animation on scroll */
 // Function to check if an element is in the viewport
-function isElementInViewport(element) {
+function isElementInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
   return (
-      rect.top >= 0 &&
+      rect.top + offset >= 0 &&
       rect.left >= 0 &&
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
@@ -109,9 +81,10 @@ function isElementInViewport(element) {
 // Function to handle scroll animations
 function handleScrollAnimations() {
   var elements = document.querySelectorAll('.animate-on-scroll');
+  var offset = -80; // Posun spouštěcího bodu o 50px nahoru
 
   elements.forEach(function (element) {
-      if (isElementInViewport(element)) {
+      if (isElementInViewport(element, offset)) {
           element.classList.add('animate');
       } else {
           element.classList.remove('animate');
