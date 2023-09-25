@@ -94,4 +94,33 @@ function clearCookies() {
   clearButton.addEventListener('click', clearCookies);
 
 
+/* animation on scroll */
+// Function to check if an element is in the viewport
+function isElementInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
+// Function to handle scroll animations
+function handleScrollAnimations() {
+  var elements = document.querySelectorAll('.animate-on-scroll');
+
+  elements.forEach(function (element) {
+      if (isElementInViewport(element)) {
+          element.classList.add('animate');
+      } else {
+          element.classList.remove('animate');
+      }
+  });
+}
+
+// Listen for the scroll event and trigger animations
+window.addEventListener('scroll', handleScrollAnimations);
+
+// Trigger animations on page load
+handleScrollAnimations();

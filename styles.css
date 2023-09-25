@@ -324,3 +324,24 @@ input[type="submit"]:hover {
     width:60vw;
     height:30vw; 
 }
+
+/* onscrollanimation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Add a subtle vertical translation */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+#element1{
+    color: #000000;
+    height: 100vw;
+    width: 60vw;
+}
+#element2{
+    height: 100vw;
+    width: 60vw;
+}
