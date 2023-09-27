@@ -50,6 +50,7 @@ nav{
 }
 .navbar {
     padding: 4vw 2vw;
+    
 }
 
 /* Hamburger menu icon styles */
@@ -132,6 +133,7 @@ a.nav-link:hover ,a.nav-link:focus{
 }
 .nav-link{
     transition: all 0.5s ease-out;
+    
 }
 /*END color cange on mouse desktop menu*/
 
@@ -317,15 +319,6 @@ input[type="submit"]:hover {
 }
 
 
-.map{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width:60vw;
-    height:30vw; 
-}
-
 /* onscrollanimation */
 .ofert{
     display: flex;
@@ -376,3 +369,19 @@ input[type="submit"]:hover {
 }
 
 
+/* spodek */
+
+
+.map{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width:30vw;
+    height:10vw; 
+}
+.leftfooter{
+    display: flex;
+    flex-direction: column;
+}
