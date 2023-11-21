@@ -8,6 +8,7 @@
     
 }
 
+
 /*Start Static position of logo anf brand name*/
 .brand-name{
     display: flex;
@@ -48,6 +49,7 @@ nav{
 /* Navbar styles */
 #menuIcon {
     display: flex; 
+    animation: rolldown 2s ease-in-out;
 }
 .navbar {
     padding: 4vw 2vw;
@@ -74,10 +76,18 @@ nav{
 }
 nav{
     transition: visibility 0s, opacity 2s linear;
+    animation: rolldown 2s ease-in-out;
 }
-
+#list-items{
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    margin-top: 10vh;
+    animation: rolldown 2s ease-in-out;
+}
 .navbar-mobile {
-    display: none;  
+    display: none;
+    
   } 
   @media screen and (max-width: 800px) {
     .navbar-mobile {
@@ -90,6 +100,16 @@ nav{
     }
 }
 /*END mobile device MENU button*/
+
+@keyframes rolldown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 /*Start Desktop navigation setting*/
 .navbar-desktop {
     display:flex ;
@@ -106,6 +126,7 @@ nav{
 /*END Desktop navigation setting*/
 }
 .nav-link {
+    
     color: rgb(0, 0, 0);
     
     padding: 12px 16px;
@@ -161,6 +182,7 @@ h1{
     background-image: url('./images/1.JPG');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
 }
     @media screen and (max-width: 800px) {
         .background {
@@ -416,4 +438,17 @@ footer{
 .leftfooter{
     display: flex;
     flex-direction: column;
+}
+
+
+.ofert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
